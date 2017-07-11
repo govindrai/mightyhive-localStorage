@@ -25,11 +25,13 @@
         return Math.random() > 0.50 ? "red" : "blue";
       }
 
-      /* regex code leveraged from https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie */
+      /* regex pattern leveraged from https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie */
 
-      function checkForCookie() {
-        return document.cookie.replace(/(?:(?:^|.*;\s*)red_or_blue_circle\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+      function getCookie(key) {
+        const pattern = new RegExp("(?:(?:^|.*;\s*)" + key + "\s*\=\s*([^;]*).*$)|^.*$")
+        return document.cookie.replace(pattern, "$1");
       }
+
 
     </script>
 </body>
