@@ -50,10 +50,13 @@
         return {color, newViewCount}
       }
 
-      function paintView({color, newViewCount}) {
+      function paintView() {
+        const {color, newViewCount} = updateCookies();
         document.getElementById("circle").style.backgroundColor = color;
         document.getElementById("viewCount").innerHTML = newViewCount;
       }
+
+      paintView();
     </script>
 </body>
 </html>
