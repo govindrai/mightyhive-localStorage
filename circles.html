@@ -48,6 +48,11 @@
 
         return {color, newViewCount}
       }
+
+      function paintView({color, newViewCount}) {
+        document.getElementById("circle").style.backgroundColor = color;
+        document.getElementById("viewCount").innerHTML = newViewCount;
+      }
     </script>
 </body>
 </html>
