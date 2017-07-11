@@ -3,14 +3,34 @@
 <head>
     <title>Red or Blue Circles</title>
     <link rel="style/css" href="">
+    <style type="text/css">
+      body {
+        max-width: 960px;
+        margin: auto;
+      }
+
+      #circle {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+      }
+    </style>
 </head>
 <body>
-    <script type="text/javascript">
-    function colorCalculator() {
-      return Math.random() > 0.50 ? "red" : "blue";
-    }
 
-    console.log(colorCalculator());
+    <div id="circle"></div>
+
+    <script type="text/javascript">
+      function colorCalculator() {
+        return Math.random() > 0.50 ? "red" : "blue";
+      }
+
+      /* regex code leveraged from https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie */
+
+      function checkForCookie() {
+        return document.cookie.replace(/(?:(?:^|.*;\s*)red_or_blue_circle\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+      }
+
     </script>
 </body>
 </html>
