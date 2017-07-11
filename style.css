@@ -1,0 +1,10 @@
+body {
+  max-width: 960px;
+  margin: auto;
+}
+
+#circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
