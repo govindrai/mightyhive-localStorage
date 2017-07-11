@@ -32,7 +32,22 @@
         return document.cookie.replace(pattern, "$1");
       }
 
+      function updateCookies() {
+        let color = getCookie("red_or_blue_circle");
+        let newViewCount;
 
+        if (color === "") {
+          color = colorCalculator();
+          document.cookie = "red_or_blue_circle=" + color;
+          document.cookie = "circle_views=1";
+        } else {
+          const views = getCookie("circle_views");
+          newViewCount = parseInt(viewsCookie, 10) + 1;
+          document.cookie = "circle_views=" + newViewCount;
+        }
+
+        return {color, newViewCount}
+      }
     </script>
 </body>
 </html>
