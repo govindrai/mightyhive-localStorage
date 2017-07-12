@@ -26,6 +26,8 @@ function updateCookies() {
     console.log("has cookie");
     const views = getCookie("circle_views");
     newViewCount = parseInt(views, 10) + 1;
+    console.log("OLD VIEWS", views);
+    console.log("NEW VIEWS", newViewCount);
     document.cookie = "circle_views=" + newViewCount;
   }
 
