@@ -19,7 +19,8 @@ function updateCookies() {
   if (color === "") {
     color = colorCalculator();
     document.cookie = "red_or_blue_circle=" + color;
-    document.cookie = "circle_views=1";
+    newViewCount = 1;
+    document.cookie = "circle_views=" + newViewCount;
   } else {
     const views = getCookie("circle_views");
     newViewCount = parseInt(views, 10) + 1;
