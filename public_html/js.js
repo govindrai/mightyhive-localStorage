@@ -22,7 +22,7 @@ function updateCookies() {
     document.cookie = "circle_views=1";
   } else {
     const views = getCookie("circle_views");
-    newViewCount = parseInt(viewsCookie, 10) + 1;
+    newViewCount = parseInt(views, 10) + 1;
     document.cookie = "circle_views=" + newViewCount;
   }
 
