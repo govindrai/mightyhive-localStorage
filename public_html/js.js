@@ -7,7 +7,7 @@ function colorCalculator() {
 // URL: https://developer.mozilla.org/en-US/docs/Web/API/Document/cookie
 // returns the cookie value associated with specified key or empty string
 function getCookie(key) {
-  const pattern = new RegExp("(?:(?:^|.*;\s*)" + key + "\s*\=\s*([^;]*).*$)|^.*$")
+  const pattern = new RegExp("(?:(?:^|.*;\\s*)" + key + "\\s*\\=\\s*([^;]*).*$)|^.*$")
   return document.cookie.replace(pattern, "$1");
 }
 
