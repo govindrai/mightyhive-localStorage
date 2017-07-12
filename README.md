@@ -15,7 +15,7 @@ ___
 Use the DOM API to record data using browser cookies and render view based on data stored in cookies. Please see comments in js.js for code explanations and code references.
 
 ### Typical Rendered View: 
-![Typical View](https://mightyhive.herokuapp.com/view.png")
+![Typical View](https://mightyhive.herokuapp.com/view.png)
 
 ## Technologies Implemented ##
 - JavaScript (ES6)
