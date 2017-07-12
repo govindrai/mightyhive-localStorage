@@ -21,13 +21,9 @@ function updateCookies() {
     document.cookie = "red_or_blue_circle=" + color;
     newViewCount = 1;
     document.cookie = "circle_views=" + newViewCount;
-    console.log("no cookie");
   } else {
-    console.log("has cookie");
     const views = getCookie("circle_views");
     newViewCount = parseInt(views, 10) + 1;
-    console.log("OLD VIEWS", views);
-    console.log("NEW VIEWS", newViewCount);
     document.cookie = "circle_views=" + newViewCount;
   }
 
